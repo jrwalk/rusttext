@@ -1,0 +1,11 @@
+[package]
+name = "rusttext"
+version = "0.1.0"
+authors = ["John Walk <johnrwalk@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "rusttext"
+path = "src/lib.rs"
+
+[dependencies]

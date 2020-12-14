@@ -1,0 +1,19 @@
+[package]
+name = "rusttext"
+version = "0.0.1"
+authors = ["John Walk <johnrwalk@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "rusttext"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.12"
+features = ["extension-module"]
+
+[target.x86_64-apple-darwin]
+rustflags = [
+  "-C", "link-arg=-undefined",
+  "-C", "link-arg=dynamic_lookup",
+]
